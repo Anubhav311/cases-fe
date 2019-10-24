@@ -29,11 +29,11 @@ const signupError = () => {
 export const signupUser = (email, password) => dispatch => {
     dispatch(requestSignup());
     myFirebase.auth().createUserWithEmailAndPassword(email, password)
-        .then(user => {
-            dispatch(receiveSignup(user));
-        })
-        .catch(error => {
-            dispatch(signupError());
-        })
+    .then(user => {
+        dispatch(receiveSignup(user));
+    })
+    .catch(error => {
+        dispatch(signupError());
+    })
 }
 

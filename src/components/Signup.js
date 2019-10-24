@@ -5,21 +5,21 @@ import { signupUser } from "../actions/signup";
 import { useState, useEffect } from 'react';
 
 function Signup(props={}) {
-    const [credentials, setCredentials] = useState({email: "", password: ""})
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
 
-    const { signupError, isAuthenticated } = props;
+    const { signupError, isAccountCreated } = props;
 
     const handleEmailChange = ({ target }) => {
-        setCredentials({ email: target.value });
+        setEmail(target.value);
     };
 
     const handlePasswordChange = ({ target }) => {
-        setCredentials({ password: target.value });
+        setPassword(target.value);
     };
 
     const handleSubmit = () => {
         const { dispatch } = props;
-        const { email, password } = credentials;
 
         dispatch(signupUser(email, password));
     };
