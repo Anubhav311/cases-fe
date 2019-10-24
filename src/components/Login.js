@@ -6,6 +6,7 @@ import { useState } from 'react';
 
 
 function Login(props) {
+
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
 
@@ -23,50 +24,49 @@ function Login(props) {
         dispatch(loginUser(email, password));
     };
 
-        const { loginError, isAuthenticated } = props;
-        if (isAuthenticated) {
-            return <Redirect to="/" />;
-        } else {
-            return (
+    const { loginError, isAuthenticated } = props;
+
+    if (isAuthenticated) {
+        return <Redirect to="/" />;
+    } else {
+        return (
+            <div>
                 <div>
-                    <div>
-                        <h3>Sign in</h3>
-                        <input
-                            variant="outlined"
-                            margin="normal"
-                            fullWidth
-                            id="email"
-                            label="Email Address"
-                            name="email"
-                            onChange={handleEmailChange}
-                        />
-                        <input
-                            variant="outlined"
-                            margin="normal"
-                            fullWidth
-                            name="password"
-                            label="Password"
-                            type="password"
-                            id="password"
-                            onChange={handlePasswordChange}
-                        />
-                        {loginError && (<p>Incorrect email or password.</p>)}
-                        <button
-                            type="button"
-                            fullWidth
-                            variant="contained"
-                            color="primary"
-                            onClick={handleSubmit}
-                        >
-                            Sign In
-                        </button>
-                    </div>
+                    <h3>Sign in</h3>
+                    <input
+                        variant="outlined"
+                        margin="normal"
+                        fullWidth
+                        id="email"
+                        label="Email Address"
+                        name="email"
+                        onChange={handleEmailChange}
+                    />
+                    <input
+                        variant="outlined"
+                        margin="normal"
+                        fullWidth
+                        name="password"
+                        label="Password"
+                        type="password"
+                        id="password"
+                        onChange={handlePasswordChange}
+                    />
+                    {loginError && (<p>Incorrect email or password.</p>)}
+                    <button
+                        type="button"
+                        fullWidth
+                        variant="contained"
+                        color="primary"
+                        onClick={handleSubmit}
+                    >
+                        Sign In
+                    </button>
                 </div>
-            );
-        }
+            </div>
+        );
+    }
 }
-
-
 
 function mapStateToProps(state) {
     return {
