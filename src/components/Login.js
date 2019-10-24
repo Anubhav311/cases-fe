@@ -2,28 +2,28 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Redirect } from "react-router-dom";
 import { loginUser } from "../actions";
+import { useState } from 'react';
 
 
-class Login extends Component {
-    state = { email: "", password: "" };
+function Login(props) {
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
 
-    handleEmailChange = ({ target }) => {
-        this.setState({ email: target.value });
+    const handleEmailChange = ({ target }) => {
+        setEmail(target.value);
     };
 
-    handlePasswordChange = ({ target }) => {
-        this.setState({ password: target.value });
+    const handlePasswordChange = ({ target }) => {
+        setPassword(target.value);
     };
 
-    handleSubmit = () => {
-        const { dispatch } = this.props;
-        const { email, password } = this.state;
+    const handleSubmit = () => {
+        const { dispatch } = props;
 
         dispatch(loginUser(email, password));
     };
 
-    render() {
-        const { loginError, isAuthenticated } = this.props;
+        const { loginError, isAuthenticated } = props;
         if (isAuthenticated) {
             return <Redirect to="/" />;
         } else {
@@ -38,7 +38,7 @@ class Login extends Component {
                             id="email"
                             label="Email Address"
                             name="email"
-                            onChange={this.handleEmailChange}
+                            onChange={handleEmailChange}
                         />
                         <input
                             variant="outlined"
@@ -48,7 +48,7 @@ class Login extends Component {
                             label="Password"
                             type="password"
                             id="password"
-                            onChange={this.handlePasswordChange}
+                            onChange={handlePasswordChange}
                         />
                         {loginError && (<p>Incorrect email or password.</p>)}
                         <button
@@ -56,7 +56,7 @@ class Login extends Component {
                             fullWidth
                             variant="contained"
                             color="primary"
-                            onClick={this.handleSubmit}
+                            onClick={handleSubmit}
                         >
                             Sign In
                         </button>
@@ -64,7 +64,6 @@ class Login extends Component {
                 </div>
             );
         }
-    }
 }
 
 

@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Redirect } from "react-router-dom";
 import { signupUser } from "../actions/signup";
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
-function Signup(props={}) {
+function Signup(props) {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
 
