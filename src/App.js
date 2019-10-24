@@ -6,6 +6,7 @@ import './App.css';
 import ProtectedRoute from './components/ProtectedRoute';
 import Home from './components/Home';
 import Login from './components/Login';
+import Signup from './components/Signup'
 import CaseList from './components/caseList';
 import CaseForm from './components/caseForm';
 
@@ -76,6 +77,7 @@ function App(props) {
         <Route path='/login' component={Login} />
         {/* <CaseForm/>
         <CaseList/> */}
+      <Signup />
       </div>
     </Switch>
   );
