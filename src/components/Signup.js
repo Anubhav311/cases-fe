@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Redirect } from "react-router-dom";
-import { signupUser } from "../actions";
+import { signupUser } from "../actions/signup";
 import { useState, useEffect } from 'react';
 
 function Signup(props={}) {
@@ -18,10 +18,10 @@ function Signup(props={}) {
     };
 
     const handleSubmit = () => {
-        const { dispatch } = this.props;
-        const { email, password } = this.state;
+        const { dispatch } = props;
+        const { email, password } = credentials;
 
-        // dispatch(loginUser(email, password));
+        dispatch(signupUser(email, password));
     };
 
     return (
@@ -62,4 +62,13 @@ function Signup(props={}) {
     )
 }
 
-export default Signup;
+function mapStateToProps(state) {
+    return {
+        isSigningUp: state.signup.isSigningUp,
+        signupError: state.signup.signupError,
+        isAccountCreated: state.signup.isAccountCreated,
+        user: state.signup.user
+    };
+}
+
+export default connect(mapStateToProps)(Signup);
