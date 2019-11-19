@@ -5,10 +5,9 @@ import { connect } from 'react-redux';
 import { fetchCases } from '../actions/caseActions';
 
 function CaseList(props) {
-    // const [cases, setCases] = useState([])
 
     useEffect(() => {
-        // props.fetchCases();
+        props.fetchCases();
     }, [])
 
     let caseItems
@@ -28,10 +27,10 @@ function CaseList(props) {
     )
 }
 
-// const mapStateToProps = state => ({
-//     // ...state,
-//     cases: state.cases.items,
-// })
+const mapStateToProps = state => ({
+    ...state,
+    cases: state.cases.items,
+})
 
-// export default connect(mapStateToProps, { fetchCases })(CaseList);
-export default CaseList;
+export default connect(mapStateToProps, { fetchCases })(CaseList);
+// export default CaseList;
