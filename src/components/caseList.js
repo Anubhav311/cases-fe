@@ -16,7 +16,7 @@ function CaseList(props) {
             // }))
 
     }, [])
-
+    console.log(props)
     let caseItems
     if (props.cases) {
         caseItems = props.cases.map((post, key) => (

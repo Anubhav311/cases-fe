@@ -1,12 +1,13 @@
 import {FETCH_CASES, NEW_CASE, NEW_CASE_ERROR} from './types'
 import axios from 'axios'
+import { send } from 'q'
 
 export const fetchCases = () => dispatch => {
     axios.get('https://notes-app-be.herokuapp.com/api/items')
-        .then(response => console.log(response))
+        // .then(response => response.json())
         .then(cases => dispatch({
             type: FETCH_CASES,
-            payload: cases
+            payload: cases.data
         }))
 }
 
