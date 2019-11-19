@@ -8,6 +8,13 @@ function CaseList(props) {
 
     useEffect(() => {
         props.fetchCases();
+        // axios.get('https://notes-app-be.herokuapp.com/api/items')
+        //     .then(response => console.log(response.data))
+            // .then(cases => dispatch({
+            //     type: FETCH_CASES,
+            //     payload: cases
+            // }))
+
     }, [])
 
     let caseItems
@@ -27,10 +34,12 @@ function CaseList(props) {
     )
 }
 
-const mapStateToProps = state => ({
-    ...state,
-    cases: state.cases.items,
-})
+function mapStateToProps(state) {
+    return {
+        ...state,
+        cases: state.cases.items,
+    }
+}
 
 export default connect(mapStateToProps, { fetchCases })(CaseList);
 // export default CaseList;

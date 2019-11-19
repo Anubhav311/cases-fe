@@ -11,6 +11,7 @@ const initState = {
 export default function(state = initState, action) {
     switch(action.type) {
         case FETCH_CASES:
+            console.log(state)
             return {
                 ...state,
                 items: action.payload,
