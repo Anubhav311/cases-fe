@@ -19,10 +19,10 @@ function CaseList(props) {
     console.log(props)
     let caseItems
     if (props.cases) {
-        caseItems = props.cases.map((post, key) => (
+        caseItems = props.cases.map((item, key) => (
             <div key={key}>
-                <h3>{post.title}</h3>
-                <p>{post.body}</p>
+                <h3>{item.items}</h3>
+                <p>{item.link}</p>
             </div>
         ))
     }
