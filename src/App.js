@@ -17,7 +17,6 @@ function App(props) {
 
   return (
     <div>
-      <CaseForm/>
       <CaseList/>      
     </div>
     // <Switch>
