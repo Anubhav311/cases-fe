@@ -1,50 +1,9 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { connect } from 'react-redux';
-import styled from 'styled-components';
 
 import { fetchCases } from '../actions/caseActions';
-
-const ListDiv = styled.div`
-    width: 75%;
-    margin: auto;
-`
-
-const SkillDiv = styled.div`
-    box-sizing: border-box;
-    height: 80px;
-    background: #FFFFFF;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-weight: bold;
-`
-
-const DotDiv = styled.div`
-    width: 10px;
-    height: 10px;
-    background: red;
-    border-radius: 50%;
-    margin: 0 30px;
-`
-
-const ContentDiv = styled.div`
-    width: 90%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-`
-
-const DropDownP = styled.p`
-    margin: 0 30px;
-`
-
-const SkillP = styled.p`
-    width: 20%;
-`
+import { ListDiv, SkillDiv, DotDiv, ContentDiv, DropDownP, SkillP } from './caseList_styles';
 
 function CaseList(props) {
 
