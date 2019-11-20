@@ -3,7 +3,7 @@ import axios from 'axios'
 import { send } from 'q'
 
 export const fetchCases = () => dispatch => {
-    axios.get('https://notes-app-be.herokuapp.com/api/items')
+    axios.get('https://notes-app-be.herokuapp.com/api/skills')
         // .then(response => response.json())
         .then(cases => dispatch({
             type: FETCH_CASES,

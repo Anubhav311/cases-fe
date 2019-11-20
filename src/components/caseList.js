@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { fetchCases } from '../actions/caseActions';
 
 function CaseList(props) {
-
+    console.log(props)
     useEffect(() => {
         props.fetchCases();
     }, [])
@@ -13,8 +13,8 @@ function CaseList(props) {
     if (props.cases) {
         caseItems = props.cases.map((item, key) => (
             <div key={key}>
-                <h3>{item.items}</h3>
-                <p>{item.link}</p>
+                <h3>{item.skill}</h3>
+                <p>{item.created_at}</p>
             </div>
         ))
     }
