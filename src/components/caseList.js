@@ -19,7 +19,8 @@ const SkillDiv = styled.div`
     padding: 10px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    font-weight: bold;
 `
 
 const DotDiv = styled.div`
@@ -27,8 +28,22 @@ const DotDiv = styled.div`
     height: 10px;
     background: red;
     border-radius: 50%;
-    margin-left: -30px;
-    /* margin-right: -30px; */
+    margin: 0 30px;
+`
+
+const ContentDiv = styled.div`
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+`
+
+const DropDownP = styled.p`
+    margin: 0 30px;
+`
+
+const SkillP = styled.p`
+    width: 20%;
 `
 
 function CaseList(props) {
@@ -42,10 +57,12 @@ function CaseList(props) {
         caseItems = props.cases.map((item, key) => (
             <SkillDiv key={key}>
                 <DotDiv></DotDiv>
-                <p>{item.skill}</p>
-                <p>{item.created_at}</p>
-                <p>completion</p>
-                <p>*</p>
+                    <ContentDiv>
+                        <SkillP>{item.skill}</SkillP>
+                        <p>{item.created_at}</p>
+                        <p>completion</p>
+                <DropDownP>*</DropDownP>
+                    </ContentDiv>
             </SkillDiv>
         ))
     }
