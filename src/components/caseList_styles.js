@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
-export const ListDiv = styled.div`
+export const Div_list = styled.div`
     width: 75%;
     margin: auto;
 `
 
-export const SkillDiv = styled.div`
+export const Div_skill = styled.div`
     box-sizing: border-box;
     height: 80px;
     background: #FFFFFF;
@@ -18,7 +18,7 @@ export const SkillDiv = styled.div`
     font-weight: bold;
 `
 
-export const DotDiv = styled.div`
+export const Div_dot = styled.div`
     width: 10px;
     height: 10px;
     background: red;
@@ -26,17 +26,17 @@ export const DotDiv = styled.div`
     margin: 0 30px;
 `
 
-export const ContentDiv = styled.div`
+export const Div_content = styled.div`
     width: 90%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 `
 
-export const DropDownP = styled.p`
+export const P_dropDown = styled.p`
     margin: 0 30px;
 `
 
-export const SkillP = styled.p`
+export const P_skill = styled.p`
     width: 20%;
 `

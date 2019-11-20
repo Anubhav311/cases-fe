@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { connect } from 'react-redux';
 
 import { fetchCases } from '../actions/caseActions';
-import { ListDiv, SkillDiv, DotDiv, ContentDiv, DropDownP, SkillP } from './caseList_styles';
+import { Div_list, Div_skill, Div_dot, Div_content, P_dropDown, P_skill } from './caseList_styles';
 
 function CaseList(props) {
 
@@ -14,22 +14,22 @@ function CaseList(props) {
     let caseItems
     if (props.cases) {
         caseItems = props.cases.map((item, key) => (
-            <SkillDiv key={key}>
-                <DotDiv></DotDiv>
-                    <ContentDiv>
-                        <SkillP>{item.skill}</SkillP>
+            <Div_skill key={key}>
+                <Div_dot></Div_dot>
+                    <Div_content>
+                        <P_skill>{item.skill}</P_skill>
                         <p>{item.created_at}</p>
                         <p>completion</p>
-                <DropDownP>*</DropDownP>
-                    </ContentDiv>
-            </SkillDiv>
+                <P_dropDown>*</P_dropDown>
+                    </Div_content>
+            </Div_skill>
         ))
     }
     return (
-        <ListDiv>
+        <Div_list>
             <h1>Cases List</h1>
             {caseItems}
-        </ListDiv>
+        </Div_list>
     )
 }
 
