@@ -13,12 +13,12 @@ export default function(state = initState, action) {
         case FETCH_PARTS:
             return {
                 ...state,
-                items: action.payload,
+                parts: action.payload,
             }
         case NEW_PART:
             return {
                 ...state,
-                item: action.payload
+                parts: action.payload
             }
         case NEW_PART_ERROR:
             return state

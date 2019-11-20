@@ -3,12 +3,14 @@ import { useEffect } from 'react';
 import { connect } from 'react-redux';
 
 import { fetchCases } from '../actions/caseActions';
+import { fetchParts } from '../actions/skillPartsAction';
 import { Div_list, Div_skill, Div_dot, Div_content, P_dropDown, P_skill } from './caseList_styles';
 
 function CaseList(props) {
-
+    console.log(props)
     useEffect(() => {
         props.fetchCases();
+        props.fetchParts();
     }, [])
 
     let caseItems
@@ -40,4 +42,4 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStateToProps, { fetchCases })(CaseList);
+export default connect(mapStateToProps, { fetchCases, fetchParts })(CaseList);
