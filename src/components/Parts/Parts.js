@@ -1,26 +1,31 @@
 import React from 'react';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 
 import { fetchParts } from '../../actions/skillPartsAction';
 import { Div_parts, Div_divider, Div_part, Div_parts_container, P_1, P_2, P_3, P_4, Div_1, Div_2, Div_1a, Div_card_divider, Input_slider } from './Parts_styles';
 
 function Parts(props) {
+    const [sliderValue, setSliderValue] = useState(1)
     useEffect(() => {
         props.fetchParts();
-    }, []) 
+    }, [])
+
+    function changeSlider(e) {
+        setSliderValue(e.target.value)
+    }
 
     let parts
     if (props.parts) {
         parts = props.parts.map((part, key) => (
-            <Div_part key={key}>
+            <Div_part color={sliderValue + "%"} key={key}>
                 <Div_1>
                     <Div_1a>
                         <P_1>{part.part_name}</P_1>
                     </Div_1a>
                     <P_2>{(new Date() - new Date(part.created_at))}</P_2>
                 </Div_1>
-                <div><input className="slider" type='range' min={1} max={100}/></div>
+                <div><input className="slider" value={sliderValue} type='range' min={1} max={100} onChange={changeSlider}/></div>
                 <Div_card_divider></Div_card_divider>
                 <Div_2>
                     <P_3>Completed: {part.completion_status}</P_3>
