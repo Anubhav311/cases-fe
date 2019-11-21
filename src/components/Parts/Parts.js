@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { connect } from 'react-redux';
 
 import { fetchParts } from '../../actions/skillPartsAction';
-import { Div_parts, Div_divider } from './Parts_styles';
+import { Div_parts, Div_divider, Div_part, Div_parts_container } from './Parts_styles';
 
 function Parts(props) {
 
@@ -14,10 +14,10 @@ function Parts(props) {
     let parts
     if (props.parts) {
         parts = props.parts.map((part, key) => (
-            <div key={key}>
+            <Div_part key={key}>
                 <p>{part.part_name}</p>
                 <p>{part.created_at}</p>
-            </div>
+            </Div_part>
         ))
     }
 
@@ -25,7 +25,9 @@ function Parts(props) {
         <Div_parts>
             <h1>Parts</h1>
             <Div_divider></Div_divider>
-            {parts}
+            <Div_parts_container>
+                {parts}
+            </Div_parts_container>
         </Div_parts>
     )
 }

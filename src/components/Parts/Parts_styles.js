@@ -10,4 +10,16 @@ export const Div_divider = styled.div`
     height: 3px;
     background: darkgray;
     border-radius: 5px;
+    margin: 20px 0;
+`
+
+export const Div_part = styled.div`
+    width: 20%;
+    min-width: 100px;
+    height: 100px;
+    background: #FFFFFF;
+`
+
+export const Div_parts_container = styled.div`
+    display: flex;
 `
