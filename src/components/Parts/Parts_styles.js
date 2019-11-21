@@ -22,6 +22,9 @@ export const Div_part = styled.div`
     background: #FFFFFF;
     padding: 20px;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 `
 
 export const Div_parts_container = styled.div`
@@ -31,6 +34,7 @@ export const Div_parts_container = styled.div`
 export const P_1 = styled.p`
     font-size: 0.8rem;
     margin: 0;
+    font-weight: bold;
 `
 
 export const P_2 = styled.p`
@@ -46,4 +50,14 @@ export const P_3 = styled.p`
 export const P_4 = styled.p`
     font-size: 0.8rem;
     margin: 0;
+`
+
+export const Div_1 = styled.div`
+    display: flex;
+    justify-content: space-between;
+`
+
+export const Div_2 = styled.div`
+    display: flex;
+    justify-content: space-between;
 `
