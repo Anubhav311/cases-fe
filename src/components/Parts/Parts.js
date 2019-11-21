@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { connect } from 'react-redux';
 
 import { fetchParts } from '../../actions/skillPartsAction';
+import { Div_parts, Div_divider } from './Parts_styles';
 
 function Parts(props) {
 
@@ -21,10 +22,11 @@ function Parts(props) {
     }
 
     return (
-        <div>
+        <Div_parts>
             <h1>Parts</h1>
+            <Div_divider></Div_divider>
             {parts}
-        </div>
+        </Div_parts>
     )
 }
 
