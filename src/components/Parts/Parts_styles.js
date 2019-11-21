@@ -14,12 +14,36 @@ export const Div_divider = styled.div`
 `
 
 export const Div_part = styled.div`
-    width: 20%;
+    width: 30%;
     min-width: 100px;
-    height: 100px;
+    height: 150px;
+    border-radius: 10px;
+    margin-right: 40px;
     background: #FFFFFF;
+    padding: 20px;
+    box-sizing: border-box;
 `
 
 export const Div_parts_container = styled.div`
     display: flex;
+`
+
+export const P_1 = styled.p`
+    font-size: 0.8rem;
+    margin: 0;
+`
+
+export const P_2 = styled.p`
+    font-size: 0.8rem;
+    margin: 0;
+`
+
+export const P_3 = styled.p`
+    font-size: 0.8rem;
+    margin: 0;
+`
+
+export const P_4 = styled.p`
+    font-size: 0.8rem;
+    margin: 0;
 `
