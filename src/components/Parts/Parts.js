@@ -21,6 +21,7 @@ function Parts(props) {
                     <P_2>{(new Date() - new Date(part.created_at))}</P_2>
                 </Div_1>
                 <div>slider</div>
+                <div></div>
                 <Div_2>
                     <P_3>Completed: {part.completion_status}</P_3>
                     <P_4>Social: {part.social_status}</P_4>
