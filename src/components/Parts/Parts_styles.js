@@ -56,6 +56,9 @@ export const Div_part = styled.div`
             background: #4CAF50; 
             cursor: pointer; 
         }
+        &::-webkit-slider-runnable-track {
+            /* background: black; */
+        }
     }
 `
 
