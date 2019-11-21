@@ -16,7 +16,7 @@ export const Div_divider = styled.div`
 export const Div_part = styled.div`
     width: 30%;
     min-width: 100px;
-    height: 150px;
+    height: 200px;
     border-radius: 10px;
     margin-right: 40px;
     background: #FFFFFF;
@@ -26,6 +26,37 @@ export const Div_part = styled.div`
     flex-direction: column;
     justify-content: space-between;
     box-shadow: 0px 5px 30px -10px;
+
+    .slider {
+        -webkit-appearance: none;
+        margin: 40px 0;
+        width: 90%;
+        height: 10px;
+        border-radius: 5px;
+        background: #ccc;
+        outline: none;
+        opacity: 0.7;
+        -webkit-transition: 0.2s;
+        transition: opacity 0.2s;
+        &::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            /* appearance: none; */
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: black;
+            cursor: pointer;
+        }
+        &:hover {
+            opacity: 1
+        }
+        &::-moz-range-thumb {
+            width: 25px; 
+            height: 25px; 
+            background: #4CAF50; 
+            cursor: pointer; 
+        }
+    }
 `
 
 export const Div_parts_container = styled.div`
@@ -78,3 +109,5 @@ export const Div_card_divider = styled.div`
     background: darkgray;
     width: 100%;
 `
+
+

@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { connect } from 'react-redux';
 
 import { fetchParts } from '../../actions/skillPartsAction';
-import { Div_parts, Div_divider, Div_part, Div_parts_container, P_1, P_2, P_3, P_4, Div_1, Div_2, Div_1a, Div_card_divider } from './Parts_styles';
+import { Div_parts, Div_divider, Div_part, Div_parts_container, P_1, P_2, P_3, P_4, Div_1, Div_2, Div_1a, Div_card_divider, Input_slider } from './Parts_styles';
 
 function Parts(props) {
     useEffect(() => {
@@ -20,7 +20,7 @@ function Parts(props) {
                     </Div_1a>
                     <P_2>{(new Date() - new Date(part.created_at))}</P_2>
                 </Div_1>
-                <div><input type='range'/></div>
+                <div><input className="slider" type='range' value={3} min={1} max={10}/></div>
                 <Div_card_divider></Div_card_divider>
                 <Div_2>
                     <P_3>Completed: {part.completion_status}</P_3>
