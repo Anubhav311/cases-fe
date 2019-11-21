@@ -30,8 +30,8 @@ function App(props) {
   return (
     <AppDiv>
       <Div></Div>
-      <Parts/>
-      <SkillsList/>
+      <Route exact path="/" component={Parts} />
+      <Route path="/skills" component={SkillsList}/>
     </AppDiv>
     // <Switch>
     //   <div className="App">
