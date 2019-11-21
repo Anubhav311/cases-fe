@@ -14,33 +14,45 @@ function SkillsList(props) {
         props.fetchParts();
     }, []) 
 
-    let skillItems
+    let skills
     if (props.skills) {
-        skillItems = props.skills.map((item, key) => (
+        skills = props.skills.map((skill, key) => (
             <Div_skill key={key}>
                 <Div_dot></Div_dot>
                     <Div_content>
-                        <P_skill>{item.skill}</P_skill>
-                        <p>{item.created_at}</p>
+                        <P_skill>{skill.skill}</P_skill>
+                        <p>{skill.created_at}</p>
                         <p>completion</p>
-                <P_dropDown>*</P_dropDown>
+                        <P_dropDown>*</P_dropDown>
                     </Div_content>
             </Div_skill>
         ))
     }
+
+    let parts
+    if (props.parts) {
+        parts = props.parts.map((part, key) => (
+            <div key={key}>
+                <p>{part.part_name}</p>
+                <p>{part.created_at}</p>
+            </div>
+        ))
+    }
+
     return (
         <Div_list>
             <h1>Skills List</h1>
-            {skillItems}
+            {skills}
+            {parts}
         </Div_list>
     )
 }
 
 function mapStateToProps(state) {
-    console.log(state)
     return {
         ...state,
         skills: state.skills.skills,
+        parts: state.parts.parts
     }
 }
 
