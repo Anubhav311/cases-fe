@@ -31,7 +31,6 @@ function Parts(props) {
 function mapStateToProps(state) {
     return {
         ...state,
-        skills: state.skills.skills,
         parts: state.parts.parts
     }
 }
