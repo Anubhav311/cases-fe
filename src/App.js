@@ -11,6 +11,14 @@ import Signup from './components/Signup'
 import SkillsList from './components/Skills/skillsList';
 import Parts from './components/Parts/Parts';
 import CaseForm from './components/caseForm';
+import { createGlobalStyle, ThemeProvider } from 'styled-components'
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    color: ${props => (props.whiteColor ? 'white' : 'black')};
+    font-family: sans-serif;
+  }
+`
 
 const AppDiv = styled.div`
   background: #D3D8DA;

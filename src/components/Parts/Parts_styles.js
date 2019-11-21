@@ -34,7 +34,6 @@ export const Div_parts_container = styled.div`
 export const P_1 = styled.p`
     font-size: 0.8rem;
     margin: 0;
-    /* font-weight: bold; */
     color: white;
 `
 

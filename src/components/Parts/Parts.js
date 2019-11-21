@@ -6,7 +6,6 @@ import { fetchParts } from '../../actions/skillPartsAction';
 import { Div_parts, Div_divider, Div_part, Div_parts_container, P_1, P_2, P_3, P_4, Div_1, Div_2, Div_1a } from './Parts_styles';
 
 function Parts(props) {
-    console.log(props)
     useEffect(() => {
         props.fetchParts();
     }, []) 
@@ -19,7 +18,7 @@ function Parts(props) {
                     <Div_1a>
                         <P_1>{part.part_name}</P_1>
                     </Div_1a>
-                    <P_2>{part.created_at}</P_2>
+                    <P_2>{(new Date() - new Date(part.created_at))}</P_2>
                 </Div_1>
                 <div>slider</div>
                 <Div_2>
