@@ -20,7 +20,7 @@ function Parts(props) {
                     </Div_1a>
                     <P_2>{(new Date() - new Date(part.created_at))}</P_2>
                 </Div_1>
-                <div>slider</div>
+                <div><input type='range'/></div>
                 <Div_card_divider></Div_card_divider>
                 <Div_2>
                     <P_3>Completed: {part.completion_status}</P_3>
