@@ -10,12 +10,13 @@ export const Div_skill = styled.div`
     height: 80px;
     background: #FFFFFF;
     border-radius: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     padding: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     font-weight: bold;
+    box-shadow: 0px 5px 30px -10px;
 `
 
 export const Div_dot = styled.div`
