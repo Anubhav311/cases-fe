@@ -2,7 +2,7 @@ import React from 'react';
 import { useEffect } from 'react';
 import { connect } from 'react-redux';
 
-import { fetchParts } from '../actions/skillPartsAction';
+import { fetchParts } from '../../actions/skillPartsAction';
 
 function Parts(props) {
 

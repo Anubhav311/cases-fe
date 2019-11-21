@@ -9,7 +9,7 @@ import Home from './components/Home';
 import Login from './components/Login';
 import Signup from './components/Signup'
 import SkillsList from './components/Skills/skillsList';
-import Parts from './components/Parts';
+import Parts from './components/Parts/Parts';
 import CaseForm from './components/caseForm';
 
 const AppDiv = styled.div`
