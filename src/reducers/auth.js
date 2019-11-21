@@ -7,7 +7,7 @@ import {
     LOGOUT_FAILURE,
     VERIFY_REQUEST,
     VERIFY_SUCCESS
-} from '../actions';
+} from '../actions/index.js';
 
 export default (
     state = {

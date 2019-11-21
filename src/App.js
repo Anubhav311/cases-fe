@@ -8,7 +8,7 @@ import ProtectedRoute from './components/ProtectedRoute';
 import Home from './components/Home';
 import Login from './components/Login';
 import Signup from './components/Signup'
-import CaseList from './components/caseList';
+import SkillsList from './components/skillsList';
 import CaseForm from './components/caseForm';
 
 const AppDiv = styled.div`
@@ -29,7 +29,7 @@ function App(props) {
   return (
     <AppDiv>
       <Div></Div>
-      <CaseList/>
+      <SkillsList/>
     </AppDiv>
     // <Switch>
     //   <div className="App">

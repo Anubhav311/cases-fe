@@ -1,8 +1,8 @@
-import {FETCH_CASES, NEW_CASE, NEW_CASE_ERROR} from '../actions/types'
+import {FETCH_SKILLS, NEW_SKILL, NEW_SKILL_ERROR} from '../actions/types'
 
 const initState = {
-    cases: [],
-    newCase: {
+    skills: [],
+    newSkill: {
         title: '',
         body: ''
     }
@@ -10,17 +10,17 @@ const initState = {
 
 export default function(state = initState, action) {
     switch(action.type) {
-        case FETCH_CASES:
+        case FETCH_SKILLS:
             return {
                 ...state,
-                items: action.payload,
+                skills: action.payload,
             }
-        case NEW_CASE:
+        case NEW_SKILL:
             return {
                 ...state,
                 item: action.payload
             }
-        case NEW_CASE_ERROR:
+        case NEW_SKILL_ERROR:
             return state
         default:
             return state;

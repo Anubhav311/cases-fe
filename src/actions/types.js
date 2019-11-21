@@ -1,6 +1,6 @@
-export const FETCH_CASES = 'FETCH_CASES';
-export const NEW_CASE = 'NEW_CASE';
-export const NEW_CASE_ERROR = 'NEW_CASE_ERROR';
+export const FETCH_SKILLS = 'FETCH_SKILLS';
+export const NEW_SKILL = 'NEW_SKILL';
+export const NEW_SKILL_ERROR = 'NEW_SKILL_ERROR';
 
 export const FETCH_PARTS = 'FETCH_PARTS';
 export const NEW_PART = 'NEW_PART';

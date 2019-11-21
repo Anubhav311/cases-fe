@@ -2,20 +2,21 @@ import React from 'react';
 import { useEffect } from 'react';
 import { connect } from 'react-redux';
 
-import { fetchCases } from '../actions/caseActions';
+import { fetchSkills } from '../actions/skillsActions';
 import { fetchParts } from '../actions/skillPartsAction';
-import { Div_list, Div_skill, Div_dot, Div_content, P_dropDown, P_skill } from './caseList_styles';
+import { Div_list, Div_skill, Div_dot, Div_content, P_dropDown, P_skill } from './skillsList_styles';
+import { cloneNode } from '@babel/types';
 
-function CaseList(props) {
+function SkillsList(props) {
     console.log(props)
     useEffect(() => {
-        props.fetchCases();
+        props.fetchSkills();
         props.fetchParts();
-    }, [])
+    }, []) 
 
-    let caseItems
-    if (props.cases) {
-        caseItems = props.cases.map((item, key) => (
+    let skillItems
+    if (props.skills) {
+        skillItems = props.skills.map((item, key) => (
             <Div_skill key={key}>
                 <Div_dot></Div_dot>
                     <Div_content>
@@ -29,17 +30,18 @@ function CaseList(props) {
     }
     return (
         <Div_list>
-            <h1>Cases List</h1>
-            {caseItems}
+            <h1>Skills List</h1>
+            {skillItems}
         </Div_list>
     )
 }
 
 function mapStateToProps(state) {
+    console.log(state)
     return {
         ...state,
-        cases: state.cases.items,
+        skills: state.skills.skills,
     }
 }
 
-export default connect(mapStateToProps, { fetchCases, fetchParts })(CaseList);
+export default connect(mapStateToProps, { fetchSkills, fetchParts })(SkillsList);

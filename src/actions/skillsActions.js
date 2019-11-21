@@ -1,13 +1,13 @@
-import {FETCH_CASES, NEW_CASE, NEW_CASE_ERROR} from './types'
+import {FETCH_SKILLS, NEW_SKILL, NEW_SKILL_ERROR} from './types'
 import axios from 'axios'
 import { send } from 'q'
 
-export const fetchCases = () => dispatch => {
+export const fetchSkills = () => dispatch => {
     axios.get('https://notes-app-be.herokuapp.com/api/skills')
         // .then(response => response.json())
-        .then(cases => dispatch({
-            type: FETCH_CASES,
-            payload: cases.data
+        .then(skills => dispatch({
+            type: FETCH_SKILLS,
+            payload: skills.data
         }))
 }
 

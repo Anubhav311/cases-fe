@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { logoutUser } from "../actions";
+import { logoutUser } from "../actions/index.js";
 class Home extends Component {
   handleLogout = () => {
     const { dispatch } = this.props;
