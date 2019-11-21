@@ -69,7 +69,7 @@ export const Div_1a = styled.div`
     padding-left: 20px;
     background: black;
     border-radius: 25px;
-    box-shadow: 10px 5px 30px 2px;
+    box-shadow: 0px 5px 30px 0px;
 `
 
 export const Div_card_divider = styled.div`
