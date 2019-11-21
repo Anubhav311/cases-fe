@@ -25,6 +25,7 @@ export const Div_part = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    box-shadow: 0px 5px 30px -10px;
 `
 
 export const Div_parts_container = styled.div`
@@ -69,7 +70,7 @@ export const Div_1a = styled.div`
     padding-left: 20px;
     background: black;
     border-radius: 25px;
-    box-shadow: 0px 5px 30px 0px;
+    box-shadow: 0px 5px 30px -5px;
 `
 
 export const Div_card_divider = styled.div`
