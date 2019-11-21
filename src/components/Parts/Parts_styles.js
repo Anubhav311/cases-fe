@@ -70,3 +70,9 @@ export const Div_1a = styled.div`
     background: black;
     border-radius: 25px;
 `
+
+export const Div_card_divider = styled.div`
+    height: 1px;
+    background: darkgray;
+    width: 100%;
+`
