@@ -34,7 +34,8 @@ export const Div_parts_container = styled.div`
 export const P_1 = styled.p`
     font-size: 0.8rem;
     margin: 0;
-    font-weight: bold;
+    /* font-weight: bold; */
+    color: white;
 `
 
 export const P_2 = styled.p`
@@ -55,9 +56,18 @@ export const P_4 = styled.p`
 export const Div_1 = styled.div`
     display: flex;
     justify-content: space-between;
+    align-items: center;
 `
 
 export const Div_2 = styled.div`
     display: flex;
     justify-content: space-between;
+`
+
+export const Div_1a = styled.div`
+    padding: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    background: black;
+    border-radius: 25px;
 `
