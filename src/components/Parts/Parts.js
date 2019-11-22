@@ -20,6 +20,7 @@ function Parts(props) {
                     <div className="partNameContainer">
                         <p className="partName">{part.part_name}</p>
                     </div>
+                    {}
                     <p className="partTimeElapsed">{(new Date() - new Date(part.created_at))}</p>
                 </div>
                 <Slider/>
