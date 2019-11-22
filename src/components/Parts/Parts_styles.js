@@ -32,9 +32,9 @@ export const Div_part = styled.div`
         -webkit-appearance: none;
         margin: 40px 0;
         width: 90%;
-        height: 10px;
+        height: 6px;
         border-radius: 5px;
-        background: linear-gradient(90deg, blue ${props => props.color}, #ccc ${props => props.color});
+        background: linear-gradient(90deg, black ${props => props.color}, #ccc ${props => props.color});
         outline: none;
         opacity: 0.7;
         -webkit-transition: 0.2s;
@@ -42,10 +42,11 @@ export const Div_part = styled.div`
         &::-webkit-slider-thumb {
             -webkit-appearance: none;
             appearance: none;
-            width: 30px;
-            height: 30px;
+            width: 18px;
+            height: 18px;
+            border: 5px solid black;
             border-radius: 50%;
-            background: black;
+            background: white;
             cursor: pointer;
         }
         &::-webkit-slider-thumb:hover {
