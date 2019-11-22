@@ -14,15 +14,15 @@ function SkillsList(props) {
     let skills
     if (props.skills) {
         skills = props.skills.map((skill, key) => (
-            <Div_skill key={key}>
-                <Div_dot></Div_dot>
-                    <Div_content>
-                        <P_skill>{skill.skill}</P_skill>
+            <div className="skill" key={key}>
+                <div className="dot"></div>
+                    <div className="content">
+                        <p className="skillText">{skill.skill}</p>
                         <p>{skill.created_at}</p>
                         <p>completion</p>
-                        <P_dropDown>*</P_dropDown>
-                    </Div_content>
-            </Div_skill>
+                        <p className="dropDown">*</p>
+                    </div>
+            </div>
         ))
     }
 
