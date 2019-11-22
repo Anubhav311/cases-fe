@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { fetchParts } from '../../actions/skillPartsAction';
 import Slider from './Slider/Slider';
 import { Div_parts } from './Parts_styles';
-import TimeElapsed from '../timeElapsed';
+import TimeElapsed from '../timeElapsed/timeElapsed';
 
 function Parts(props) {
 
@@ -21,7 +21,6 @@ function Parts(props) {
                     <div className="partNameContainer">
                         <p className="partName">{part.part_name}</p>
                     </div>
-                    {/* <p className="partTimeElapsed">{(new Date() - new Date(part.created_at))}</p> */}
                     <TimeElapsed created_at={part.created_at}/>
                 </div>
                 <Slider/>
