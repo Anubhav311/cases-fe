@@ -1,6 +1,8 @@
 import React from 'react'
 
-export default function TimeElapsed(props) {
+import { TimeElapsedStyles } from './timeElapsed_styles'
+// console.log(timeElapsedStyles)
+function TimeElapsed(props) {
 
     let timeElapsed = ""
     let createdAt = new Date(props.created_at)
@@ -31,5 +33,10 @@ export default function TimeElapsed(props) {
     } else {
         timeElapsed = `${Math.floor(years)} years`
     }
-    return ("Started " + timeElapsed + " ago")
+
+    return (
+            <TimeElapsedStyles>Started {timeElapsed} ago</TimeElapsedStyles>
+    )
 }
+
+export default TimeElapsed;
