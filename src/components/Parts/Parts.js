@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 
 import { fetchParts } from '../../actions/skillPartsAction';
+import Slider from './Slider/Slider';
 import { Div_parts, Div_divider, Div_part, Div_parts_container, P_1, P_2, P_3, P_4, Div_1, Div_2, Div_1a, Div_card_divider, Input_slider } from './Parts_styles';
 
 function Parts(props) {
@@ -25,7 +26,7 @@ function Parts(props) {
                     </Div_1a>
                     <P_2>{(new Date() - new Date(part.created_at))}</P_2>
                 </Div_1>
-                <div><input className="slider" value={sliderValue} type='range' min={1} max={100} onChange={changeSlider}/></div>
+                <Slider/>
                 <Div_card_divider></Div_card_divider>
                 <Div_2>
                     <P_3>Completed: {part.completion_status}</P_3>
