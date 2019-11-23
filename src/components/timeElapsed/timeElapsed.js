@@ -35,7 +35,7 @@ function TimeElapsed(props) {
     }
 
     return (
-            <TimeElapsedStyles>Started {timeElapsed} ago</TimeElapsedStyles>
+            <TimeElapsedStyles>{timeElapsed} ago</TimeElapsedStyles>
     )
 }
 

@@ -8,7 +8,7 @@ import { Div_parts } from './Parts_styles';
 import TimeElapsed from '../timeElapsed/timeElapsed';
 
 function Parts(props) {
-
+console.log(props)
     useEffect(() => {
         props.fetchParts();
     }, [])
@@ -32,6 +32,7 @@ function Parts(props) {
                 
             </div>
         ))
+        parts.push(<div className="part"></div>)
     }
 
     return (

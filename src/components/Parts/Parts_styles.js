@@ -15,14 +15,15 @@ export const Div_parts = styled.div`
 
     .partsContainer {
         display: flex;
+        flex-wrap: wrap;
     }
 
     .part {
-        width: 30%;
+        width: 29%;
         min-width: 100px;
         height: 200px;
         border-radius: 10px;
-        margin-right: 40px;
+        margin: 0 40px 40px 0;
         background: #FFFFFF;
         padding: 20px;
         box-sizing: border-box;
