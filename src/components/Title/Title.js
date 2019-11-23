@@ -21,10 +21,14 @@ function Title(props) {
         setTitle({...title, isInEditMode: !title.isInEditMode})
     }
 
+    const changeHandler = (e) => {
+        setTitle({...title, value: e.target.value})
+    }
+
     return (
         <div>
 
-    {title.isInEditMode ? <input onBlur={changeEditMode} type="text" ref={inputRef}/> : <p onClick={changeEditMode}>{title.value}</p> }
+    {title.isInEditMode ? <input onChange={changeHandler} onBlur={changeEditMode} type="text" ref={inputRef}/> : <p onClick={changeEditMode}>{title.value}</p> }
         </div>
     )
 }
