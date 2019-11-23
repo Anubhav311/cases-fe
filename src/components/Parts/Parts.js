@@ -6,6 +6,7 @@ import { fetchParts } from '../../actions/skillPartsAction';
 import Slider from './Slider/Slider';
 import { Div_parts } from './Parts_styles';
 import TimeElapsed from '../timeElapsed/timeElapsed';
+import Title from '../Title/Title';
 
 function Parts(props) {
 console.log(props)
@@ -19,7 +20,8 @@ console.log(props)
             <div className="part" key={key}>
                 <div className="partHeader">
                     <div className="partNameContainer">
-                        <p className="partName">{part.part_name}</p>
+                        {/* <p className="partName">{part.part_name}</p> */}
+                        <Title/>
                     </div>
                     <TimeElapsed created_at={part.created_at}/>
                 </div>
