@@ -11,8 +11,10 @@ const initState = {
 export default function(state = initState, action) {
     switch(action.type) {
         case UPDATE_PART_TITLE:
-            console.log(action)
-            return state;
+            return {
+                ...state,
+                parts: action.payload
+            }
         case FETCH_PARTS:
             return {
                 ...state,

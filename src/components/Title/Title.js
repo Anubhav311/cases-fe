@@ -6,42 +6,43 @@ import { PartTitleContainer } from './Title_styles';
 import { updatePartTitle } from '../../actions/partsTitle';
 
 function Title(props) {
-    const [title, setTitle] = useState({
-        value: props.title,
-        isInEditMode: false
-    })
+    const [isInEditMode, setIsInEditMode] = useState(false)
+
+    let parts = props.parts
+    let index = props.index
 
     const inputRef = useRef(null);
     
     useEffect(() => {
-        props.updatePartTitle(props.index)
-        if (title.isInEditMode) {
+        if (isInEditMode) {
             inputRef.current.focus()
         }
-    }, [title.isInEditMode])
+    }, [isInEditMode])
+
 
     const changeEditMode = () => {
-        setTitle({...title, isInEditMode: !title.isInEditMode})
+        setIsInEditMode(!isInEditMode)
     }
 
     const changeHandler = (e) => {
-        setTitle({...title, value: e.target.value})
+        parts[index].part_name = e.target.value
+        props.updatePartTitle(parts)
     }
 
     return (
         <PartTitleContainer>
-            {title.isInEditMode 
+            {isInEditMode 
                 ? 
             <input 
                 onChange={changeHandler} 
                 onBlur={changeEditMode} 
                 type="text" 
                 ref={inputRef} 
-                defaultValue={title.value}
+                defaultValue={parts[index].part_name}
             /> 
                 : 
             <p onClick={changeEditMode} className="partName">
-                {title.value}
+                {parts[index].part_name}
             </p> }
         </PartTitleContainer>
     )
