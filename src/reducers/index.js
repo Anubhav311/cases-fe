@@ -1,12 +1,12 @@
-import skills from './skillsReducer';
-import parts from './partsReducer';
+import { skillsReducer } from './reducers';
+import { partsReducer } from './reducers';
 import auth from './auth';
 import signup from './signup'
 import { combineReducers } from 'redux';
 
 const rootReducer = combineReducers({
-    skills,
-    parts,
+    skills: skillsReducer,
+    parts: partsReducer,
     signup,
     auth
 })
