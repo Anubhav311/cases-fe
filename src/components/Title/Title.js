@@ -1,6 +1,7 @@
 import React from 'react';
-
 import { useState, useEffect, useRef } from 'react'
+
+import { PartTitleContainer } from './Title_styles';
 
 function Title(props) {
     const [title, setTitle] = useState({
@@ -25,10 +26,9 @@ function Title(props) {
     }
 
     return (
-        <div>
-
-    {title.isInEditMode ? <input onChange={changeHandler} onBlur={changeEditMode} type="text" ref={inputRef} defaultValue={title.value}/> : <p onClick={changeEditMode}>{title.value}</p> }
-        </div>
+        <PartTitleContainer>
+            {title.isInEditMode ? <input onChange={changeHandler} onBlur={changeEditMode} type="text" ref={inputRef} defaultValue={title.value}/> : <p onClick={changeEditMode}>{title.value}</p> }
+        </PartTitleContainer>
     )
 }
 

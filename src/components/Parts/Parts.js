@@ -19,10 +19,10 @@ console.log(props)
         parts = props.parts.map((part, key) => (
             <div className="part" key={key}>
                 <div className="partHeader">
-                    <div className="partNameContainer">
+                    {/* <div className="partNameContainer"> */}
                         {/* <p className="partName">{part.part_name}</p> */}
                         <Title/>
-                    </div>
+                    {/* </div> */}
                     <TimeElapsed created_at={part.created_at}/>
                 </div>
                 <Slider/>
