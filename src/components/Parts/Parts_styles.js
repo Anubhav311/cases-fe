@@ -39,21 +39,6 @@ export const Div_parts = styled.div`
         align-items: center;
     }
 
-    .partNameContainer {
-        padding: 10px;
-        padding-right: 20px;
-        padding-left: 20px;
-        background: black;
-        border-radius: 25px;
-        box-shadow: 0px 5px 30px -5px;
-    }
-
-    .partName {
-        font-size: 0.8rem;
-        margin: 0;
-        color: white;
-    }
-
     .partTimeElapsed {
         font-size: 0.8rem;
         margin: 0;

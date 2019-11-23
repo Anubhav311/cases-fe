@@ -37,7 +37,7 @@ function Title(props) {
                 defaultValue={title.value}
             /> 
                 : 
-            <p onClick={changeEditMode}>
+            <p onClick={changeEditMode} className="partName">
                 {title.value}
             </p> }
         </PartTitleContainer>

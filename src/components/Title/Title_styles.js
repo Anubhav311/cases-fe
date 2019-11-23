@@ -8,4 +8,10 @@ export const PartTitleContainer = styled.div`
     background: black;
     border-radius: 25px;
     box-shadow: 0px 5px 30px -5px;
+    
+    .partName {
+        font-size: 0.8rem;
+        margin: 0;
+        color: white;
+    }
 `
