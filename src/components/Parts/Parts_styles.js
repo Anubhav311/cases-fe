@@ -79,4 +79,17 @@ export const Div_parts = styled.div`
         font-size: 0.8rem;
         margin: 0;
     }
+
+    .createNewPart {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: none;
+        color: white;
+        font-size: 2rem;
+        background: black;
+        margin: auto;
+        box-shadow: 0px 5px 30px 0px black;
+        cursor: pointer;
+    }
 `

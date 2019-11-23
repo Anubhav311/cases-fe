@@ -32,7 +32,14 @@ console.log(props)
                 
             </div>
         ))
-        parts.push(<div className="part"></div>)
+
+        parts.push(
+            <div className="part">
+                <button className="createNewPart">
+                    +
+                </button>
+            </div>
+        )
     }
 
     return (
