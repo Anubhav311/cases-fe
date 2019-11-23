@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from 'react'
 import { connect } from 'react-redux';
 
 import { PartTitleContainer } from './Title_styles';
-import { updatePartTitle } from '../../actions/partsTitle';
+import { updatePartTitle } from '../../actions/actionCreators';
 
 function Title(props) {
     const [isInEditMode, setIsInEditMode] = useState(false)

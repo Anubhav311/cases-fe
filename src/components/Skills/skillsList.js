@@ -2,7 +2,7 @@ import React from 'react';
 import { useEffect } from 'react';
 import { connect } from 'react-redux';
 
-import { fetchSkills } from '../../actions/skillsActions';
+import { fetchSkills } from '../../actions/actionCreators';
 import { Div_list, Div_skill, Div_dot, Div_content, P_dropDown, P_skill } from './skillsList_styles';
 import { cloneNode } from '@babel/types';
 

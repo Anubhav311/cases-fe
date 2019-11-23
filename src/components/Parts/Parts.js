@@ -2,7 +2,7 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 
-import { fetchParts } from '../../actions/skillPartsAction';
+import { fetchParts } from '../../actions/actionCreators';
 import Slider from './Slider/Slider';
 import { Div_parts } from './Parts_styles';
 import TimeElapsed from '../timeElapsed/timeElapsed';

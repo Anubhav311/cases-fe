@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
-import { createCase } from '../actions/skillsActions';
+// import { createCase } from '../actions/skillsActions';
 
 function CaseForm(props) {
     const [title, setTitle] = useState('')
