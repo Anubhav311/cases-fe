@@ -27,7 +27,19 @@ function Title(props) {
 
     return (
         <PartTitleContainer>
-            {title.isInEditMode ? <input onChange={changeHandler} onBlur={changeEditMode} type="text" ref={inputRef} defaultValue={title.value}/> : <p onClick={changeEditMode}>{title.value}</p> }
+            {title.isInEditMode 
+                ? 
+            <input 
+                onChange={changeHandler} 
+                onBlur={changeEditMode} 
+                type="text" 
+                ref={inputRef} 
+                defaultValue={title.value}
+            /> 
+                : 
+            <p onClick={changeEditMode}>
+                {title.value}
+            </p> }
         </PartTitleContainer>
     )
 }
