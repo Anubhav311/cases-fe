@@ -17,7 +17,6 @@ function Title(props) {
     }, [title.isInEditMode])
 
     const changeEditMode = () => {
-        console.log("should go to edit mode now")
         setTitle({...title, isInEditMode: !title.isInEditMode})
     }
 
@@ -28,7 +27,7 @@ function Title(props) {
     return (
         <div>
 
-    {title.isInEditMode ? <input onChange={changeHandler} onBlur={changeEditMode} type="text" ref={inputRef}/> : <p onClick={changeEditMode}>{title.value}</p> }
+    {title.isInEditMode ? <input onChange={changeHandler} onBlur={changeEditMode} type="text" ref={inputRef} defaultValue={title.value}/> : <p onClick={changeEditMode}>{title.value}</p> }
         </div>
     )
 }
