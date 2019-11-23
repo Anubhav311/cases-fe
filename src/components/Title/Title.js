@@ -1,17 +1,20 @@
 import React from 'react';
 import { useState, useEffect, useRef } from 'react'
+import { connect } from 'react-redux';
 
 import { PartTitleContainer } from './Title_styles';
+import { updatePartTitle } from '../../actions/partsTitle';
 
 function Title(props) {
     const [title, setTitle] = useState({
-        value: "Title",
+        value: props.title,
         isInEditMode: false
     })
 
     const inputRef = useRef(null);
-
+    
     useEffect(() => {
+        props.updatePartTitle(props.index)
         if (title.isInEditMode) {
             inputRef.current.focus()
         }
@@ -44,4 +47,13 @@ function Title(props) {
     )
 }
 
-export default Title;
+// export default Title;
+function mapStateToProps(state) {
+    return {
+        ...state,
+        parts: state.parts.parts
+    }
+}
+
+
+export default connect(mapStateToProps, { updatePartTitle })(Title);

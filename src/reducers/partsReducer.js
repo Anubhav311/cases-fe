@@ -1,4 +1,4 @@
-import {FETCH_PARTS, NEW_PART, NEW_PART_ERROR} from '../actions/types'
+import {FETCH_PARTS, NEW_PART, NEW_PART_ERROR, UPDATE_PART_TITLE} from '../actions/types'
 
 const initState = {
     parts: [],
@@ -10,6 +10,9 @@ const initState = {
 
 export default function(state = initState, action) {
     switch(action.type) {
+        case UPDATE_PART_TITLE:
+            console.log(action)
+            return state;
         case FETCH_PARTS:
             return {
                 ...state,

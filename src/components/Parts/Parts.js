@@ -9,20 +9,17 @@ import TimeElapsed from '../timeElapsed/timeElapsed';
 import Title from '../Title/Title';
 
 function Parts(props) {
-console.log(props)
     useEffect(() => {
         props.fetchParts();
     }, [])
 
     let parts
+    let index = 0
     if (props.parts) {
         parts = props.parts.map((part, key) => (
             <div className="part" key={key}>
                 <div className="partHeader">
-                    {/* <div className="partNameContainer"> */}
-                        {/* <p className="partName">{part.part_name}</p> */}
-                        <Title/>
-                    {/* </div> */}
+                    <Title title={part.part_name} index={index} />
                     <TimeElapsed created_at={part.created_at}/>
                 </div>
                 <Slider/>
@@ -31,7 +28,7 @@ console.log(props)
                     <p className="completionStatus">Completed: {part.completion_status}</p>
                     <p className="socialStatus">Social: {part.social_status}</p>
                 </div>
-                
+                {index++}
             </div>
         ))
 
