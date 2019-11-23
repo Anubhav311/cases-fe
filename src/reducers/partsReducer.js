@@ -1,4 +1,4 @@
-import {FETCH_PARTS, NEW_PART, NEW_PART_ERROR, UPDATE_PART_TITLE} from '../actions/types'
+import {FETCH_PARTS, NEW_PART, NEW_PART_ERROR, UPDATE_PART_TITLE} from '../actions/actionTypes'
 
 const initState = {
     parts: [],

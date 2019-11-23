@@ -1,4 +1,4 @@
-import {FETCH_SKILLS, NEW_SKILL, NEW_SKILL_ERROR} from '../actions/types'
+import {FETCH_SKILLS, NEW_SKILL, NEW_SKILL_ERROR} from '../actions/actionTypes'
 
 const initState = {
     skills: [],

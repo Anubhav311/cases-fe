@@ -1,4 +1,4 @@
-import { UPDATE_PART_TITLE, FETCH_PARTS, FETCH_SKILLS } from './types'
+import { UPDATE_PART_TITLE, FETCH_PARTS, FETCH_SKILLS } from './actionTypes'
 import axios from 'axios'
 
 
