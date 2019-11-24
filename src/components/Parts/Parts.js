@@ -19,7 +19,7 @@ function Parts(props) {
         parts = props.parts.map((part, key) => (
             <div className="part" key={key}>
                 <div className="partHeader">
-                    <Title title={part.part_name} index={index} />
+                    <Title title={part.part_name} index={key} />
                     <TimeElapsed created_at={part.created_at}/>
                 </div>
                 <Slider/>
@@ -28,7 +28,6 @@ function Parts(props) {
                     <p className="completionStatus">Completed: {part.completion_status}</p>
                     <p className="socialStatus">Social: {part.social_status}</p>
                 </div>
-                {index++}
             </div>
         ))
 
