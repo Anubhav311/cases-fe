@@ -38,14 +38,13 @@ export const updatePartCompletionStatus = payload => dispatch => {
 
 
 export const deletePart = id => dispatch => {
-    axios.delete('https://notes-app-be.herokuapp.com/api/parts', id)
-        .then(response => console.log(response)
-            // console.log('worked', id)
-            // return dispatch({
-            //     type: DELETE_PART,
-            //     payload: payload
-            // })
-        )
+    axios.delete('https://notes-app-be.herokuapp.com/api/parts', {data: id})
+        .then(parts => {
+            return dispatch({
+                type: DELETE_PART,
+                payload: parts.data
+            })
+        })
         .catch(err => {
             console.log(err.message)
         })

@@ -12,7 +12,7 @@ function Parts(props) {
     useEffect(() => {
         props.fetchParts();
     }, [])
-
+    console.log(props)
     let parts
     if (props.parts) {
         parts = props.parts.map((part, key) => (

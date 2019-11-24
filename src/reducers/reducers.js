@@ -6,7 +6,8 @@ import {
     NEW_PART, 
     NEW_PART_ERROR, 
     UPDATE_PART_TITLE,
-    UPDATE_PART_COMPLETION_STATUS
+    UPDATE_PART_COMPLETION_STATUS,
+    DELETE_PART
 } from '../actions/actionTypes'
 
 
@@ -48,6 +49,11 @@ export function partsReducer(
     }, action
     ) {
     switch(action.type) {
+        case DELETE_PART:
+            return {
+                ...state,
+                parts: action.payload
+            }
         case UPDATE_PART_COMPLETION_STATUS:
             return state
         case UPDATE_PART_TITLE:
