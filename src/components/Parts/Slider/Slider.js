@@ -2,21 +2,22 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 
-// import { fetchParts } from '../../actions/skillPartsAction';
+import { updatePartCompletionStatus } from '../../../actions/actionCreators';
 import { Div_slider } from './Slider_styles';
 
 function Slider(props) {
     const [sliderValue, setSliderValue] = useState(1)
+    let parts = props.parts
+    let index = props.index
 
     function changeSlider(e) {
         setSliderValue(e.target.value)
+        parts[index].completion_status = parseInt(e.target.value)
+        props.updatePartCompletionStatus(parts)
     }
-
-    let parts = props.parts
-    let index = props.index
-    parts[index].completion_status = sliderValue
-    console.log(parts)
-
+    
+    console.log(props)
+    
     return (
         <Div_slider color={sliderValue + "%"}>
             <input 
@@ -38,4 +39,4 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStateToProps)(Slider);
+export default connect(mapStateToProps, { updatePartCompletionStatus })(Slider);

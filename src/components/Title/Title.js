@@ -18,7 +18,7 @@ function Title(props) {
             inputRef.current.focus()
         }
     }, [isInEditMode])
-
+    console.log(props)
 
     const changeEditMode = () => {
         setIsInEditMode(!isInEditMode)

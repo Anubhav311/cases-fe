@@ -5,7 +5,8 @@ import {
     FETCH_PARTS, 
     NEW_PART, 
     NEW_PART_ERROR, 
-    UPDATE_PART_TITLE
+    UPDATE_PART_TITLE,
+    UPDATE_PART_COMPLETION_STATUS
 } from '../actions/actionTypes'
 
 
@@ -47,6 +48,8 @@ export function partsReducer(
     }, action
     ) {
     switch(action.type) {
+        case UPDATE_PART_COMPLETION_STATUS:
+            return state
         case UPDATE_PART_TITLE:
             return {
                 ...state,
