@@ -2,7 +2,7 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 
-import { fetchParts } from '../../actions/actionCreators';
+import { fetchParts, deletePart } from '../../actions/actionCreators';
 import Slider from './Slider/Slider';
 import { Div_parts } from './Parts_styles';
 import TimeElapsed from '../timeElapsed/timeElapsed';
@@ -26,7 +26,7 @@ function Parts(props) {
                 <div className="partFooter">
                     <p className="completionStatus">Completed: {part.completion_status}</p>
                     <p className="socialStatus">Social: {part.social_status}</p>
-                    <p className="deletePart" onClick={() => {console.log('hi')}}>x</p>
+                    <p className="deletePart" onClick={() => {props.deletePart({id: part.id})}}>x</p>
                 </div>
             </div>
         ))
@@ -58,4 +58,4 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStateToProps, { fetchParts })(Parts);
+export default connect(mapStateToProps, { fetchParts, deletePart })(Parts);
