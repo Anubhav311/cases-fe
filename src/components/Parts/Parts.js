@@ -14,15 +14,14 @@ function Parts(props) {
     }, [])
 
     let parts
-    let index = 0
     if (props.parts) {
         parts = props.parts.map((part, key) => (
             <div className="part" key={key}>
                 <div className="partHeader">
                     <Title title={part.part_name} index={key} />
-                    <TimeElapsed created_at={part.created_at}/>
+                    <TimeElapsed created_at={part.created_at} />
                 </div>
-                <Slider/>
+                <Slider index={key} />
                 <div className="cardDivider"></div>
                 <div className="partFooter">
                     <p className="completionStatus">Completed: {part.completion_status}</p>

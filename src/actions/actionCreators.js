@@ -1,4 +1,4 @@
-import { UPDATE_PART_TITLE, FETCH_PARTS, FETCH_SKILLS } from './actionTypes'
+import { UPDATE_PART_TITLE, FETCH_PARTS, FETCH_SKILLS, UPDATE_PART_COMPLETION_STATUS } from './actionTypes'
 import axios from 'axios'
 
 
@@ -26,4 +26,12 @@ export const fetchSkills = () => dispatch => {
             type: FETCH_SKILLS,
             payload: skills.data
         }))
+}
+
+
+export const updatePartCompletionStatus = payload => dispatch => {
+    dispatch({
+        type: UPDATE_PART_COMPLETION_STATUS,
+        payload: payload
+    })
 }
