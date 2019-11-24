@@ -26,6 +26,7 @@ function Parts(props) {
                 <div className="partFooter">
                     <p className="completionStatus">Completed: {part.completion_status}</p>
                     <p className="socialStatus">Social: {part.social_status}</p>
+                    <p className="deletePart" onClick={() => {console.log('hi')}}>x</p>
                 </div>
             </div>
         ))

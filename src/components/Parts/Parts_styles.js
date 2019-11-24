@@ -77,4 +77,10 @@ export const Div_parts = styled.div`
         box-shadow: 0px 5px 30px 0px black;
         cursor: pointer;
     }
+
+    .deletePart {
+        font-size: 0.8rem;
+        margin: 0;
+        cursor: pointer;
+    }
 `
