@@ -6,7 +6,7 @@ import { fetchParts } from '../../actions/actionCreators';
 import Slider from './Slider/Slider';
 import { Div_parts } from './Parts_styles';
 import TimeElapsed from '../timeElapsed/timeElapsed';
-import Title from '../Title/Title';
+import Title from './Title/Title';
 
 function Parts(props) {
     useEffect(() => {

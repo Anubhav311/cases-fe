@@ -16,8 +16,6 @@ function Slider(props) {
         props.updatePartCompletionStatus(parts)
     }
     
-    console.log(props)
-    
     return (
         <Div_slider color={sliderValue + "%"}>
             <input 
