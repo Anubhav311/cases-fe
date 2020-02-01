@@ -55,7 +55,10 @@ export function partsReducer(
                 parts: action.payload
             }
         case UPDATE_PART_COMPLETION_STATUS:
-            return state
+            return {
+                ...state,
+                parts: action.payload
+            }
         case UPDATE_PART_TITLE:
             return {
                 ...state,

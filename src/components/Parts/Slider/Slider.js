@@ -14,6 +14,7 @@ function Slider(props) {
         setSliderValue(e.target.value)
         parts[index].completion_status = parseInt(e.target.value)
         props.updatePartCompletionStatus(parts)
+        console.log(props)
     }
     
     return (
